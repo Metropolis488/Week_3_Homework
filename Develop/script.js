@@ -30,7 +30,19 @@ function bigLoop() {
       for (var i = 0; i < amount; i++) {
           result += total[Math.floor(Math.random() * total.length)];
       }
-      document.getElementById("password").value = result;
+      document.getElementById("password").value = result;      
   }
   createPW(howManyChar);
 }
+
+// this was the first way I did the generator... will work beyond arrays
+// function makeid(length) {
+//   var result           = '';
+//   var charactersLength = charPopulation.length;
+//   for ( var i = 0; i < length; i++ ) {
+//      result += charPopulation.charAt(Math.floor(Math.random() * charactersLength));
+//   }
+//   return result;
+// }
+
+// console.log(makeid(howMany));
