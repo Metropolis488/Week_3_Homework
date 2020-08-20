@@ -1,10 +1,8 @@
 document.getElementById("generate").addEventListener("click", bigLoop);
-
 var bigLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var littleLetters = "abcdefghijklmnopqrstuvwxyz";
 var randNumbers = "0123456789";
 var happyChar = "!@#$%^&*()[]{}_-/?:;,.<>|";
-
 function bigLoop() { 
   var howManyChar = prompt("how many characters?");
   var upper = confirm("upper case?");
@@ -23,17 +21,12 @@ function bigLoop() {
   } if (upper === false && lower === false && rand === false && speC === false) {
     alert("You have to pick something!");
   }
-
-  //console.log(total);
-  function createPW(amount) {
-      var result = '';
-      for (var i = 0; i < amount; i++) {
-          result += total[Math.floor(Math.random() * total.length)];
-      }
-      document.getElementById("password").value = result;      
+  var result = '';
+  for (var i = 0; i < howManyChar; i++) {
+    result += total[Math.floor(Math.random() * total.length)];
+    }
+  document.getElementById("password").value = result;      
   }
-  createPW(howManyChar);
-}
 
 // this was the first way I did the generator... will work beyond arrays
 // function makeid(length) {
@@ -44,5 +37,3 @@ function bigLoop() {
 //   }
 //   return result;
 // }
-
-// console.log(makeid(howMany));
